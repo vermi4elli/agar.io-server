@@ -18,7 +18,7 @@ namespace Agar.io_Server
 
         public static void Start(int _maxPlayers, int _port)
         {
-            MaxPlayers = Math.Min(_maxPlayers, 1);
+            MaxPlayers = _maxPlayers;
             Port = _port;
 
             Console.WriteLine("Starting server...");
