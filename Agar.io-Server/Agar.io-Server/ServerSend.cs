@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,6 +58,10 @@ namespace Agar.io_Server
                 _packet.Write(_msg);
                 _packet.Write(_toClient);
 
+                _packet.Write(Server.food.Count());
+                foreach (var foodElement in Server.food)
+                    _packet.Write(foodElement);
+
                 SendTCPData(_toClient, _packet);
             }
         }
@@ -70,6 +75,28 @@ namespace Agar.io_Server
                 _packet.Write(_player.position);
 
                 SendTCPData(_toClient, _packet);
+            }
+        }
+        
+        public static void SpawnFood(Vector2 position)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.spawnFood))
+            {
+                _packet.Write(position);
+
+                SendUDPDataToAll(_packet);
+            }
+        }
+        
+        public static void FoodEaten(Vector2 position, Player _player)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.foodEaten))
+            {
+                _packet.Write(_player.id);
+                _packet.Write(position);
+                _packet.Write(_player.score);
+
+                SendUDPDataToAll(_packet);
             }
         }
 

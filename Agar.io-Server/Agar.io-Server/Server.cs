@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
+using System.Numerics;
 
 namespace Agar.io_Server
 {
@@ -10,6 +11,7 @@ namespace Agar.io_Server
         public static int MaxPlayers { get; private set; }
         public static int Port { get; private set; }
         public static Dictionary<int, Client> clients = new Dictionary<int, Client>();
+        public static HashSet<Vector2> food = new HashSet<Vector2>();
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
 
@@ -118,6 +120,7 @@ namespace Agar.io_Server
             {
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
                 { (int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
+                { (int)ClientPackets.eatFood, ServerHandle.EatFood },
             };
             Console.WriteLine("Initialized packets.");
         }

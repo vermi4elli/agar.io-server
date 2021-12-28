@@ -9,13 +9,15 @@ namespace Agar.io_Server
     {
         welcome = 1,
         spawnPlayer,
+        spawnFood,
         playerPosition,
-        playerRotation
+        foodEaten
     }
     public enum ClientPackets
     {
         welcomeReceived = 1,
-        playerMovement
+        playerMovement,
+        eatFood,
     }
 
     public class Packet : IDisposable

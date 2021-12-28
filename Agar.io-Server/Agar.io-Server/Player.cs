@@ -5,6 +5,7 @@ namespace Agar.io_Server
     class Player
     {
         public int id;
+        public int score;
         public string username;
 
         public Vector2 position;
@@ -17,6 +18,7 @@ namespace Agar.io_Server
             id = _id;
             username = _username;
             position = _spawnPosition;
+            score = 0;
 
             inputs = new bool[4];
         }
@@ -53,6 +55,12 @@ namespace Agar.io_Server
         public void SetInput(bool[] _inputs)
         {
             inputs = _inputs;
+        }
+
+        public void EatFood(Vector2 _position)
+        {
+            score += 10;
+            ServerSend.FoodEaten(_position, this);
         }
     }
 }

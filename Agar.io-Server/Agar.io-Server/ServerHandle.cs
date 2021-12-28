@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Numerics;
 
 namespace Agar.io_Server
 {
@@ -30,6 +27,17 @@ namespace Agar.io_Server
             }
 
             Server.clients[_fromClient].player.SetInput(_inputs);
+        }
+
+        public static void EatFood(int _fromClient, Packet _packet)
+        {
+            Vector2 position = _packet.ReadVector2();
+
+            if (Server.food.Contains(position))
+            {
+                Server.food.Remove(position);
+                Server.clients[_fromClient].player.EatFood(position);
+            }
         }
     }
 }
