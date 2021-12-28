@@ -1,0 +1,16 @@
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.exe
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.deps.json
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.runtimeconfig.json
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.runtimeconfig.dev.json
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.dll
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\ref\Agar.io-Server.dll
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\bin\Debug\net5.0\Agar.io-Server.pdb
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.csproj.AssemblyReference.cache
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.AssemblyInfoInputs.cache
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.AssemblyInfo.cs
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.csproj.CoreCompileInputs.cache
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.dll
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\ref\Agar.io-Server.dll
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.pdb
+C:\Users\nikit\Documents\Agar.io-Server\Agar.io-Server\Agar.io-Server\obj\Debug\net5.0\Agar.io-Server.genruntimeconfig.cache
