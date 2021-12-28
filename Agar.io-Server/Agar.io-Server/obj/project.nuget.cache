@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mpbTj2Tx+VRqrPRJC8Wl6EKaWMfFjbGjjHdeDtmNOccwsmNQYuplAn73Df4dWZCQWJ+AkJN5Pue5iGnPaeOtsQ==",
+  "dgSpecHash": "eM4JFHTGkeE2OZdX24S8U+ZWlyTb1wkAN5EoYuciAo3Sv2tTvtLkx/N5knqZcfh+oBGZS0QKRE431Sv23w2kpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\nikit\\Documents\\Agar.io-Server\\Agar.io-Server\\Agar.io-Server\\Agar.io-Server.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\nikit\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -9,7 +9,7 @@ namespace Agar.io_Server
 
         static void Main(string[] args)
         {
-            Console.Title = "Game Server";
+            Console.Title = "Agar.io server";
             isRunning = true;
 
             Thread mainThread = new Thread(new ThreadStart(MainThread));
