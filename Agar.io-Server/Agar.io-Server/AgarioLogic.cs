@@ -17,7 +17,7 @@ namespace Agar.io_Server
         {
             foreach (Client _client in Server.clients.Values)
             {
-                if (_client.player != null)
+                if (_client.player != null && _client.player.isAlive)
                 {
                     _client.player.Update();
                 }

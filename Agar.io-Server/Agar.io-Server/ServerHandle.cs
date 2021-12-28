@@ -26,7 +26,8 @@ namespace Agar.io_Server
                 _inputs[i] = _packet.ReadBool();
             }
 
-            Server.clients[_fromClient].player.SetInput(_inputs);
+            if (Server.clients[_fromClient].player.isAlive)
+                Server.clients[_fromClient].player.SetInput(_inputs);
         }
 
         public static void EatFood(int _fromClient, Packet _packet)
@@ -36,8 +37,26 @@ namespace Agar.io_Server
             if (Server.food.Contains(position))
             {
                 Server.food.Remove(position);
-                Server.clients[_fromClient].player.EatFood(position);
+
+                if (Server.clients[_fromClient].player.isAlive)
+                    Server.clients[_fromClient].player.EatFood(position);
             }
+        }
+
+        public static void EatPlayer(int _fromClient, Packet _packet)
+        {
+            int _clientIdCheck = _packet.ReadInt();
+
+            bool areBothAlive = Server.clients[_clientIdCheck].player.isAlive
+                && Server.clients[_fromClient].player.isAlive;
+
+            if (!areBothAlive)
+                return;
+
+            if (Server.clients[_clientIdCheck].player.score > Server.clients[_fromClient].player.score)
+                Server.clients[_fromClient].player.Die(_clientIdCheck);
+            else
+                Server.clients[_clientIdCheck].player.Die(_fromClient);
         }
     }
 }

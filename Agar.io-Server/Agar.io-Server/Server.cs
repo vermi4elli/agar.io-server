@@ -121,6 +121,7 @@ namespace Agar.io_Server
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
                 { (int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
                 { (int)ClientPackets.eatFood, ServerHandle.EatFood },
+                { (int)ClientPackets.eatPlayer, ServerHandle.EatPlayer },
             };
             Console.WriteLine("Initialized packets.");
         }

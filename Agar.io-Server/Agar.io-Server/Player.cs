@@ -7,9 +7,11 @@ namespace Agar.io_Server
         public int id;
         public int score;
         public string username;
+        public bool isAlive;
 
         public Vector2 position;
 
+        const int scoreIncStep = 10;
         private float moveSpeed = 5f / Constants.TICKS_PER_SEC;
         private bool[] inputs;
 
@@ -19,6 +21,7 @@ namespace Agar.io_Server
             username = _username;
             position = _spawnPosition;
             score = 0;
+            isAlive = true;
 
             inputs = new bool[4];
         }
@@ -59,8 +62,14 @@ namespace Agar.io_Server
 
         public void EatFood(Vector2 _position)
         {
-            score += 10;
+            score += scoreIncStep;
             ServerSend.FoodEaten(_position, this);
+        }
+
+        public void Die(int _id)
+        {
+            isAlive = false;
+            ServerSend.PlayerEaten(_id, this);
         }
     }
 }
