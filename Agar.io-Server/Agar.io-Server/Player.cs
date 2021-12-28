@@ -34,11 +34,11 @@ namespace Agar.io_Server
             }
             if (inputs[2])
             {
-                _inputDirection.X += 1;
+                _inputDirection.X -= 1;
             }
             if (inputs[3])
             {
-                _inputDirection.X -= 1;
+                _inputDirection.X += 1;
             }
 
             Move(_inputDirection);

@@ -13,7 +13,7 @@ namespace Agar.io_Server
             int _clientIdCheck = _packet.ReadInt();
             string _username = _packet.ReadString();
 
-            Console.WriteLine($"{Server.clients[_fromClient].udp.endPoint} connected successfully and is now player {_fromClient}.");
+            Console.WriteLine($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}.");
             if (_fromClient != _clientIdCheck)
             {
                 Console.WriteLine($"Player \"{_username}\" (ID: {_fromClient}) has assumed the wrong client ID ({_clientIdCheck})!");
@@ -28,6 +28,7 @@ namespace Agar.io_Server
             {
                 _inputs[i] = _packet.ReadBool();
             }
+
             Server.clients[_fromClient].player.SetInput(_inputs);
         }
     }

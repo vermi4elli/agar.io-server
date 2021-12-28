@@ -9,9 +9,9 @@ namespace Agar.io_Server
     {
         welcome = 1,
         spawnPlayer,
-        playerPosition
+        playerPosition,
+        playerRotation
     }
-
     public enum ClientPackets
     {
         welcomeReceived = 1,
